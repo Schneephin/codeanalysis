@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53126845-B46A-4A60-BC0D-F2ACC3095C32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sca.Tools.CodeAnalysis.Visualizer</RootNamespace>
+    <AssemblyName>Sca.Tools.CodeAnalysis.Visualizer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Sca.Tools.ChartFramework">
+      <HintPath>..\..\Sca.Tools.ChartFramework\bin\Debug\Sca.Tools.ChartFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Sca.Tools.CodeAnalysis.Utilities">
+      <HintPath>..\..\Sca.Tools.CodeAnalysisFramework\Sca.Tools.CodeAnalysis.Utilities\bin\Debug\Sca.Tools.CodeAnalysis.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButtonPanel.Designer.cs">
+      <DependentUpon>ButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeVisualizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeVisualizer.Designer.cs">
+      <DependentUpon>CodeVisualizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="Control.cs" />
+    <Compile Include="DetailPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DetailPanel.Designer.cs">
+      <DependentUpon>DetailPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.cs" />
+    <Compile Include="FilterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilterPanel.Designer.cs">
+      <DependentUpon>FilterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToDoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToDoPanel.Designer.cs">
+      <DependentUpon>ToDoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TreeView.Designer.cs">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XMLReader.cs" />
+    <EmbeddedResource Include="ButtonPanel.resx">
+      <DependentUpon>ButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeVisualizer.resx">
+      <DependentUpon>CodeVisualizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailPanel.resx">
+      <DependentUpon>DetailPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterPanel.resx">
+      <DependentUpon>FilterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ToDoPanel.resx">
+      <DependentUpon>ToDoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeView.resx">
+      <DependentUpon>TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
